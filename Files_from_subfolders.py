@@ -1,8 +1,9 @@
 import os
 import shutil
 
-# Path to folder with subfolder, that contain files, needed to be extracted
-folder = 'D:/EMULATORS/ROMS/GBA/' # path example
+# Path to folder (C:/MAIN_FOLDER/) with subfolders (C:/MAIN_FOLDER/Sub_folder1, sub_folder2 etc.), that contains files, 
+# needed to be copied directly to MAIN_FOLDER
+folder = 'C:/MAIN_FOLDER/'
 folders_list = os.listdir(folder)
 #print(folders_list)
 
