@@ -1,0 +1,20 @@
+from pandas.io.html import read_html
+import requests
+from time import sleep
+
+ 
+# Making a list of links (there is 623 pages on site, that contains a data that we are interested in)
+a=[]
+for i in range(1,624):
+    a.append(i)
+#print(a)
+for num in a:
+    url='https://www.statkod.**/usa_index'+str(num)+'.html' #sample
+
+    r=requests.get(url).text
+    #r=r.encode('cp1251','ignore') # Ignoring unfamiliar symbols in encoding in necessary 
+    tables = read_html(r, converters={'col': str}) # Trying to make zeros to apper in zip codes (too bad, read_html dont have 'dtype' parameter)
+    filename='c:/temp/result'+str(num)+'.csv'
+    tables[1].to_csv(filename,sep='\t')
+    print (tables[1])
+    sleep(5)
