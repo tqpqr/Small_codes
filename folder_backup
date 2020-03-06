@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+
+import subprocess
+import os
+
+src = '/home/prod/' # Source folder
+dest = '/home/prod_backup/' # Backup destination folder
+
+for address,dirs,files in os.walk(src):                             # os.walk stores tuple_generator object, so it cannot be addressed twice
+    if not os.path.exists(address.replace('/prod','/prod_backup')):
+        os.makedirs(address.replace('/prod','/prod_backup'))        # If backup folder not exist - we are creating it
+    for filename in files:                                          # Now we are backing up the files in directories 
+        adr = os.path.join(address,filename)
+        print(adr)
+        d=adr.replace('/prod','/prod_backup')
+        #if not os.path.exists(d):
+        #    os.makedirs(d)
