@@ -11,4 +11,7 @@ Small code, that have been used to extract files from subfolders directly to mai
 #Pandas_table_parser
 Parsing of multiple tables and saving to csv format
 
+#Sendmail:
+Function that sends a mail e.g. for system status update or upon some user action
+
 
