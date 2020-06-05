@@ -1,5 +1,5 @@
 # Small_codes
-Small helpful codes:
+Small helpful codes, that were started as parts of bigger projects, but might be extremely useful in others:
 
 #Tuple to list:
 Small function, that cleans tuple from commas and brackets, and returns a list.
