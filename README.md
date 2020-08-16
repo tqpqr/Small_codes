@@ -17,4 +17,8 @@ Backing up all files from one folder (source) to another (destination)
 #Sendmail
 Function that sends a mail e.g. for system status update or upon some user action
 
+#TTS_to_mp3
+Save phrase, given in string as mp3 file with voice (gTTS (Google Text-To-Speech) library needed) 
+
+
 
